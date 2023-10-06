@@ -102,6 +102,28 @@ address {
   letter-spacing: 0.02em;
 }
 
+/* .current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  width: 100%;
+} */
+
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  width: 100%;
+}
+
 /*! HEADER  */
 
 .header {
@@ -138,6 +160,9 @@ address {
   display: flex;
   gap: 40px;
 }
+.header-menu-item {
+  position: relative;
+}
 
 .header-menu-link {
   font-size: 16px;
@@ -146,19 +171,25 @@ address {
   color: #2e2f42;
   letter-spacing: 0.02em;
   padding: 24px 0;
+  display: block;
+  /* 
   display: flex;
   gap: 20px;
-  flex-direction: column;
+  flex-direction: column; */
 }
-
+/* 
 .header-menu-link:hover::after,
 .header-menu-link:focus::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
   content: "";
   width: 48px;
   height: 4px;
   border-radius: 2px;
   background-color: #404bbf;
-}
+} */
 
 .address {
   font-style: normal;
@@ -183,6 +214,10 @@ address {
 .header-address-link:hover,
 .header-address-link:focus {
   color: #404bbf;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*! HERO SECTION */
@@ -342,6 +377,10 @@ address {
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: #404bbf;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
@@ -374,6 +413,10 @@ address {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-wrapper {
@@ -461,6 +504,10 @@ address {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
   width: 24px;
