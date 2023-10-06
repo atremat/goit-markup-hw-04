@@ -102,17 +102,6 @@ address {
   letter-spacing: 0.02em;
 }
 
-/* .current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-  width: 100%;
-} */
-
 .current::after {
   content: "";
   position: absolute;
@@ -172,24 +161,7 @@ address {
   letter-spacing: 0.02em;
   padding: 24px 0;
   display: block;
-  /* 
-  display: flex;
-  gap: 20px;
-  flex-direction: column; */
 }
-/* 
-.header-menu-link:hover::after,
-.header-menu-link:focus::after {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-
-  content: "";
-  width: 48px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-} */
 
 .address {
   font-style: normal;
@@ -419,6 +391,11 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-overlay-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 .portfolio-wrapper {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -433,6 +410,31 @@ address {
 }
 
 .portfolio-paragraph {
+}
+
+.portfolio-overlay {
+  padding: 40px 32px 284px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  background-color: #4d5ae5;
+
+  transition-property: background-color, transform;
+  transition-duration: 250ms, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-overlay-paragraph {
+  max-width: 296px;
+  color: #f4f4fd;
 }
 
 /*! FOOTER  */
