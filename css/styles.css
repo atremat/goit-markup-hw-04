@@ -102,21 +102,13 @@ address {
   letter-spacing: 0.02em;
 }
 
-.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 2px;
-  width: 100%;
-}
-
 /*! HEADER  */
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -150,7 +142,7 @@ address {
   gap: 40px;
 }
 .header-menu-item {
-  position: relative;
+  /* position: relative; */
 }
 
 .header-menu-link {
@@ -161,6 +153,26 @@ address {
   letter-spacing: 0.02em;
   padding: 24px 0;
   display: block;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current {
+  color: #404bbf;
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  width: 100%;
 }
 
 .address {
@@ -179,6 +191,10 @@ address {
   line-height: 1.5;
   color: #434455;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu-link:hover,
@@ -205,6 +221,7 @@ address {
   background-position: center;
   background-size: cover;
   padding: 188px 0;
+  max-width: 1440px;
 }
 
 .hero-container {
@@ -245,6 +262,10 @@ address {
 
   margin-right: auto;
   margin-left: auto;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
