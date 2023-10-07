@@ -142,7 +142,6 @@ address {
   gap: 40px;
 }
 .header-menu-item {
-  /* position: relative; */
 }
 
 .header-menu-link {
@@ -291,7 +290,6 @@ address {
   background-color: #f4f4fd;
   border-radius: 4px;
   border: 1px solid #8e8f99;
-  /* padding: 24px 100px; */
   margin-bottom: 8px;
 
   display: flex;
@@ -301,8 +299,6 @@ address {
 }
 .features-item-icon {
   display: block;
-  /* width: 64px; */
-  /* height: 64px; */
 }
 
 .features-subtitle {
@@ -382,8 +378,6 @@ address {
 }
 
 .team-social-icon {
-  /* width: 16px;
-  height: 16px; */
   fill: #f4f4fd;
 }
 
@@ -404,6 +398,10 @@ address {
   width: calc((100% - 48px) / 3);
 
   border-bottom: 1px solid #e7e9fc;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -411,10 +409,6 @@ address {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-overlay-wrap {
@@ -438,7 +432,15 @@ address {
 .portfolio-paragraph {
 }
 
-.portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay-paragraph {
+  transform: translateY(0%);
+}
+
+.portfolio-overlay-paragraph {
+  display: block;
+
+  color: #f4f4fd;
+
   padding: 40px 32px 284px;
   position: absolute;
   top: 0;
@@ -448,19 +450,9 @@ address {
   transform: translateY(100%);
   background-color: #4d5ae5;
 
-  transition-property: background-color, transform;
-  transition-duration: 250ms, 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
-    cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  transform: translateY(0);
-}
-
-.portfolio-overlay-paragraph {
-  max-width: 296px;
-  color: #f4f4fd;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*! FOOTER  */
@@ -472,10 +464,11 @@ address {
 
 .footer-container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
 
 .footer-logo-container {
+  margin-right: 120px;
 }
 
 .footer-logo {
@@ -538,7 +531,5 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
-  width: 24px;
-  height: 24px;
   fill: #f4f4fd;
 }
